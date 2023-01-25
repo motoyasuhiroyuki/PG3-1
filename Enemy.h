@@ -2,6 +2,14 @@
 class Enemy{
 public:
 
+	Enemy();
+	~Enemy();
+
+	void Approach();
+	void Shoot();
+	void GetAway();
+
+
 	//çXêV
 	void Update();
 
@@ -9,8 +17,9 @@ public:
 	void Draw();
 
 public:
-	static int aliveFlag;
-	Enemy();
-	~Enemy();
+	static void(Enemy::* pFuncTable[])();
+
+	int phase_;
+	
 };
 
